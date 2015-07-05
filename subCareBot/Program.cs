@@ -11,7 +11,9 @@ namespace subCareBot
     {
         static void Main(string[] args)
         {
-            
+            var reddit = new Reddit();
+			var user = reddit.LogIn("botusername", "botpassword");
+			
         }
     }
 }
