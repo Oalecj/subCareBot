@@ -13,7 +13,14 @@ namespace subCareBot
         {
             var reddit = new Reddit();
 			var user = reddit.LogIn("botusername", "botpassword");
-			
+			var timer = new System.Threading.Timer(
+			e => ModInvites(),  
+			null, 
+			TimeSpan.Zero, 
+			TimeSpan.FromMinutes(5));
         }
+		private ModInvites() {
+			// TODO: Figure out how to do this in RedditSharp.
+		}
     }
 }
